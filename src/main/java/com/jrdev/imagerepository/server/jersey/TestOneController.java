@@ -1,7 +1,7 @@
-package com.example.jersey;
+package com.jrdev.imagerepository.server.jersey;
 
-import com.example.entities.Doctor;
-import com.example.repositories.DoctorRepository;
+import com.jrdev.imagerepository.server.entities.Doctor;
+import com.jrdev.imagerepository.server.repositories.DoctorRepository;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.slf4j.Logger;
