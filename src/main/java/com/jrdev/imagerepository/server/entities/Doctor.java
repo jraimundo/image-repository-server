@@ -1,4 +1,4 @@
-package com.example.entities;
+package com.jrdev.imagerepository.server.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

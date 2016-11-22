@@ -1,4 +1,4 @@
-package com.example;
+package com.jrdev.imagerepository.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

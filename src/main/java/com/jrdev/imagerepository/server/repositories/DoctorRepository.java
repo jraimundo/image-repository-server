@@ -1,7 +1,7 @@
-package com.example.repositories;
+package com.jrdev.imagerepository.server.repositories;
 
 
-import com.example.entities.Doctor;
+import com.jrdev.imagerepository.server.entities.Doctor;
 import org.springframework.data.repository.CrudRepository;
 
 public interface DoctorRepository extends CrudRepository<Doctor, Long> {
