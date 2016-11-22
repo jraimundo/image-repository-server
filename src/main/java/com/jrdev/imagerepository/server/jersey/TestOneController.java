@@ -2,6 +2,7 @@ package com.jrdev.imagerepository.server.jersey;
 
 import com.jrdev.imagerepository.server.entities.Doctor;
 import com.jrdev.imagerepository.server.repositories.DoctorRepository;
+import com.jrdev.imagerepository.server.utils.FileUtils;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.slf4j.Logger;
@@ -74,11 +75,7 @@ public class TestOneController {
         String uploadedFileLocation = "/home/jrdev/temp/" + fileDetail.getFileName();
 
         // save it
-        try {
-            writeToFile(uploadedInputStream, uploadedFileLocation);
-        } catch (FileNotFoundException e) {
-            logger.error("Could not save file.", e);
-        }
+        FileUtils.writeToFile(uploadedInputStream, uploadedFileLocation);
 
         String output = "File uploaded to : " + uploadedFileLocation;
 
