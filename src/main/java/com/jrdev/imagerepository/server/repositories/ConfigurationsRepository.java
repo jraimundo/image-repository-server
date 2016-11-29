@@ -8,4 +8,6 @@ public interface ConfigurationsRepository extends CrudRepository<Configuration, 
 
     @Override
     Iterable<Configuration> findAll();
+
+    Configuration findByConfigurationKey(String configurationKey);
 }

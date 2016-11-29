@@ -10,6 +10,8 @@ public class FileUtils {
 
     private static final Logger logger = LoggerFactory.getLogger(FileUtils.class);
 
+    private FileUtils() {}
+
     /**
      * Save uploaded file to new location.
      * @param inputStream

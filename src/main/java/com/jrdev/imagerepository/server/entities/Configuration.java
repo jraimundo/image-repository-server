@@ -7,30 +7,21 @@ import javax.persistence.Id;
 public class Configuration {
 
     @Id
-    private String configurationKey;
-    private String configurationName;
-    private String configurationDescription;
+    public final String configurationKey;
+    public final String configurationValue;
+    public final String configurationDescription;
 
 
-    public Configuration() {}
+    public Configuration() {
+        configurationKey = null;
+        configurationValue = null;
+        configurationDescription = null;
+    }
 
-    public Configuration(String configurationKey, String configurationName, String configurationDescription) {
+    public Configuration(String configurationKey, String configurationValue, String configurationDescription) {
         this.configurationKey = configurationKey;
-        this.configurationName = configurationName;
+        this.configurationValue = configurationValue;
         this.configurationDescription = configurationDescription;
-    }
-
-
-    public String getConfigurationKey() {
-        return configurationKey;
-    }
-
-    public String getConfigurationName() {
-        return configurationName;
-    }
-
-    public String getConfigurationDescription() {
-        return configurationDescription;
     }
 
 }
