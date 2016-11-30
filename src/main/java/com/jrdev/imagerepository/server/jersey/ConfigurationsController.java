@@ -14,6 +14,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 
 @Controller
@@ -63,6 +64,18 @@ public class ConfigurationsController {
 
         logger.info("performed configuration value get request. Configuration key: ", configurationKey);
 
-        return configurationsUtils.getInstance().getConfigurationValue(configurationKey);
+        return configurationsUtils.getConfigurationValue(configurationKey);
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/configurationsupdate")
+    public String updateConfigurations() {
+
+        logger.info("performed configurations update");
+
+        configurationsUtils.updateConfigurations();
+
+        return Response.Status.OK.toString();
     }
 }
